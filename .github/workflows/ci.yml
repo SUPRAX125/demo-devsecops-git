@@ -1,16 +1,16 @@
 name: Test CI pull request event
 
 on:
- pull_request: #jika terdapat pull request
+ pull_request: #jika terdapat pull request, bisa juga on push #push
   branches: #ke branch
-   - master #master
+   - master #master, jadi bisa branch lain
 
 jobs: #maka jalanin jobs ini
  test: #ini namanya bebas, idnya
   name: percobaan fase test #nama idnya
   runs-on: ubuntu-latest #ini jalanin perintahnya pake apa, jadi bisa pake bash
   steps:
-  - name: Check out the repo
+  - name: Check out the repo #ini buat ngepull request yg dari branch terbaru
     uses: actions/checkout@v2
 
   - name: Exec shell
@@ -24,5 +24,22 @@ jobs: #maka jalanin jobs ini
   name: test kedua
   runs-on: ubuntu-latest
   steps:
+  - name: Pull branch
+    uses: actions/checkout@v2
+
   - name: see calendar
-    run: cal
+    run: |
+     cal
+     cat notes.md
+     ls
+     echo "ini gak di pull request"
+
+ check-git-status:
+  name: git status
+  runs-on: ubuntu-latest
+  steps:
+  - name: Pull Request branch github-cicd
+    uses: actions/checkout@v2
+
+  - name: git status
+    run: git status

@@ -1,0 +1,20 @@
+name: Test CI push master
+
+on:
+ push:
+  branches:
+   - master
+
+jobs:
+ deploy:
+  name: Testing push to master (merge)
+  runs-on: ubuntu-latest
+  steps:
+  - name: Check out the repo
+    uses: actions/checkout@v2
+
+  - name: checking has been merged
+    run: |
+     cat notes.md
+     echo "sudah di merged"
+     git status
