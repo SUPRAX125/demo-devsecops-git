@@ -2,5 +2,6 @@
 Ini utk demo devsecops di cyber academy
 ngerubah isi dari README
 
-#CONTRIBUTOR
+# CONTRIBUTOR
 Rico Andreas
+edited by anonymous
