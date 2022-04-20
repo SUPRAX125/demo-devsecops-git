@@ -29,7 +29,6 @@ jobs: #maka jalanin jobs ini
 
  check-git-status:
   name: git status
-  runs-on: ubuntu-latest
   steps:
   - name: git status
     run: |
