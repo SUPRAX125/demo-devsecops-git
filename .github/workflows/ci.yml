@@ -29,12 +29,13 @@ jobs: #maka jalanin jobs ini
      cal
      cat notes.md
      ls
+     echo "ini gak di pull request"
 
  check-git-status:
   name: git status
   runs-on: ubuntu-latest
   steps:
   - name: Pull Request branch github-cicd
-    uses: action/checkout@v2
+    uses: actions/checkout@v2
   - name: git status
     run: git status
