@@ -20,10 +20,9 @@ jobs: #maka jalanin jobs ini
      uname -a
      echo "ini testing"
 
-jobs:
-  test2:
-   name: test kedua
-   runs-on: ubuntu-latest
-   steps:
-   - name: see calendar
+ test2:
+  name: test kedua
+  runs-on: ubuntu-latest
+  steps:
+  - name: see calendar
      run: cal
