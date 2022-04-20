@@ -10,7 +10,7 @@ jobs: #maka jalanin jobs ini
   name: percobaan fase test #nama idnya
   runs-on: ubuntu-latest #ini jalanin perintahnya pake apa, jadi bisa pake bash
   steps:
-  - name: Check out the repo
+  - name: Check out the repo #ini buat ngepull request yg dari branch terbaru
     uses: actions/checkout@v2
 
   - name: Exec shell
@@ -25,11 +25,16 @@ jobs: #maka jalanin jobs ini
   runs-on: ubuntu-latest
   steps:
   - name: see calendar
-    run: cal
+    run: |
+     cal
+     cat notes.md
+     ls
 
  check-git-status:
   name: git status
   runs-on: ubuntu-latest
   steps:
+  - name: Pull Request branch github-cicd
+    uses: action/checkout@v2
   - name: git status
     run: git status
