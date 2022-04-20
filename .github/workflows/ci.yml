@@ -1,21 +1,21 @@
 name: Test CI pull request event
 
 on:
-	pull_request: #jika terdapat pull request
-		branches: #ke branch
-			- master #master
+ pull_request: #jika terdapat pull request
+  branches: #ke branch
+   - master #master
 
 jobs: #maka jalanin jobs ini
-	test: #ini namanya bebas, idnya
-		name: percobaan fase test #nama idnya
-		runs-on: ubuntu-latest #ini jalanin perintahnya pake apa, jadi bisa pake bash
-		steps:
-		- name: Check out the repo
-		  uses: actions/checkout@v2
+ test: #ini namanya bebas, idnya
+  name: percobaan fase test #nama idnya
+  runs-on: ubuntu-latest #ini jalanin perintahnya pake apa, jadi bisa pake bash
+  steps:
+  - name: Check out the repo
+    uses: actions/checkout@v2
 
-		- name: Exec shell
-		  run: |#di sini bisa jalanin perintah bash
-			id
-			ls -lah
-			uname -a
-			echo "ini testing"
+  - name: Exec shell
+    run: |#di sini bisa jalanin perintah bash
+     id
+     ls -lah
+     uname -a
+     echo "ini testing"
