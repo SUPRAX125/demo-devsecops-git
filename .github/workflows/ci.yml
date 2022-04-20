@@ -24,6 +24,9 @@ jobs: #maka jalanin jobs ini
   name: test kedua
   runs-on: ubuntu-latest
   steps:
+  - name: Pull branch
+    uses: actions/checkout@v2
+
   - name: see calendar
     run: |
      cal
@@ -37,5 +40,6 @@ jobs: #maka jalanin jobs ini
   steps:
   - name: Pull Request branch github-cicd
     uses: actions/checkout@v2
+
   - name: git status
     run: git status
