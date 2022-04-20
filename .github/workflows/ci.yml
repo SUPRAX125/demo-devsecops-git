@@ -31,6 +31,4 @@ jobs: #maka jalanin jobs ini
   name: git status
   steps:
   - name: git status
-    run: |
-     git status
-     git branch
+    run: git status
