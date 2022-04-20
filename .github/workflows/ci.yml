@@ -27,7 +27,6 @@ jobs: #maka jalanin jobs ini
   - name: see calendar
     run: cal
 
-jobs:
  check-git-status:
   name: git status
   runs-on: ubuntu-latest
