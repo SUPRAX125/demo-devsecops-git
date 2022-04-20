@@ -25,4 +25,4 @@ jobs: #maka jalanin jobs ini
   runs-on: ubuntu-latest
   steps:
   - name: see calendar
-     run: cal
+    run: cal
