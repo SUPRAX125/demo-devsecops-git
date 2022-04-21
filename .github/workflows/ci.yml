@@ -43,3 +43,6 @@ jobs: #maka jalanin jobs ini
 
   - name: git status
     run: git status
+
+  - name: test password secret
+    run: echo ${{ secrets.MY_PASSWORD }}
