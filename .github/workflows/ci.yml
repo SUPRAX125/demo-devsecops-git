@@ -6,10 +6,10 @@ on:
    - master #master, jadi bisa branch lain
 
 jobs: #maka jalanin jobs ini
- test: #ini namanya bebas, idnya
+ test: #ini namanya bebas, idnya, jalaninnya paralel kalo utk jenis ini
   name: percobaan fase test #nama idnya
   runs-on: ubuntu-latest #ini jalanin perintahnya pake apa, jadi bisa pake bash
-  steps:
+  steps: #kalo step itu sequence jalannya
   - name: Check out the repo #ini buat ngepull request yg dari branch terbaru
     uses: actions/checkout@v2
 
